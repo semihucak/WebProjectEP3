@@ -31,6 +31,17 @@ $("#ARButton").click(function () {
 	isAR = true;
 });
 
+$("#place-button").click(function(){
+	arPlace();
+});
+
+function arPlace() {
+	if (reticle.visible) {
+		current_object.position.setFromMatrixPosition(reticle.matrix);
+		current_object.visible = true;
+	}
+}
+
 function loadModel(model) {
 	new RGBELoader()
 		.setDataType(THREE.UnsignedByteType)
@@ -49,6 +60,8 @@ function loadModel(model) {
 
 				current_object = glb.scene;
 				scene.add(current_object);
+
+				arPlace();
 
 				//center the object in the screen
 				var box = new THREE.Box3();
@@ -93,34 +106,21 @@ function init() {
 	controls.enableDamping = true;
 	controls.dampingFactor = 0.05; // smooth the rotation
 
-	//
 
-	document.body.appendChild(ARButton.createButton(renderer, { requiredFeatures: ['hit-test'] }));
+	//AR SETUP
 
-	//
-
-	const geometry = new THREE.CylinderGeometry(0.1, 0.1, 0.2, 32).translate(0, 0.1, 0);
-
-	function onSelect() {
-
-		if (reticle.visible) {
-
-			/*const material = new THREE.MeshPhongMaterial({ color: 0xffffff * Math.random() });
-			const mesh = new THREE.Mesh(geometry, material);
-			mesh.position.setFromMatrixPosition(reticle.matrix);
-			mesh.scale.y = Math.random() * 2 + 1;
-			scene.add(mesh);*/
-
-			current_object.position.setFromMatrixPosition(reticle.matrix);
-			current_object.visible = true;
-
-		}
-
+	let options = {
+		requiredFeatures: ['hit-test'],
+		optionalFeatures: ['dom-overlay'],
 	}
 
-	controller = renderer.xr.getController(0);
-	controller.addEventListener('select', onSelect);
-	scene.add(controller);
+	options.domOverlay = { root: document.getElementById('content') };
+
+	document.body.appendChild(ARButton.createButton(renderer, options));
+
+	//document.body.appendChild(ARButton.createButton(renderer, { requiredFeatures: ['hit-test'] }));
+
+	//
 
 	reticle = new THREE.Mesh(
 		new THREE.RingGeometry(0.15, 0.2, 32).rotateX(- Math.PI / 2),
@@ -185,6 +185,8 @@ function render(timestamp, frame) {
 				box.setFromObject(current_object);
 				box.center(controls.target);
 
+				document.getElementById("place-button").style.display = "none";
+
 			});
 
 			hitTestSourceRequested = true;
@@ -199,13 +201,16 @@ function render(timestamp, frame) {
 
 				const hit = hitTestResults[0];
 
+				document.getElementById("place-button").style.display = "block";
+
 				reticle.visible = true;
 				reticle.matrix.fromArray(hit.getPose(referenceSpace).transform.matrix);
 
 			} else {
 
 				reticle.visible = false;
-
+				
+				document.getElementById("place-button").style.display = "none";
 			}
 
 		}
