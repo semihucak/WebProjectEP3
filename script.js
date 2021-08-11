@@ -1,4 +1,14 @@
+/*
 import * as THREE from '../build/three.module.js';
+import { ARButton } from './jsm/webxr/ARButton.js';
+
+import { OrbitControls } from './jsm/controls/OrbitControls.js';
+import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
+import { RGBELoader } from './jsm/loaders/RGBELoader.js';
+import { RoughnessMipmapper } from './jsm/utils/RoughnessMipmapper.js';
+*/
+
+import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js';
 import { ARButton } from './jsm/webxr/ARButton.js';
 
 import { OrbitControls } from './jsm/controls/OrbitControls.js';
