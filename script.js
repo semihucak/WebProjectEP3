@@ -1,5 +1,4 @@
-
-import * as THREE from '../build/three.module.js';
+import * as THREE from './build/three.module.js';
 import { ARButton } from './jsm/webxr/ARButton.js';
 
 import { OrbitControls } from './jsm/controls/OrbitControls.js';
