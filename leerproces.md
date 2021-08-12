@@ -6,6 +6,7 @@ Als opgave voor het project van web topics heb ik een gekozen om een place it ap
 
 ## Leerproces
 
+### Wat heb je allemaal geleerd/gelezen?
 
 
 ## Bronnen
@@ -13,5 +14,9 @@ Als opgave voor het project van web topics heb ik een gekozen om een place it ap
 https://developers.google.com/ar/develop/webxr/environment
 
 https://threejs.org
+
+https://forum.playcanvas.com/t/solved-webxr-hittest-how-to-hit-test-and-show-a-reticle-on-the-floor/14621
+
+https://web.dev/ar-hit-test/
 
 

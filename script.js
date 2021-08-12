@@ -100,11 +100,17 @@ function init() {
 
     //
 
-    document.body.appendChild(ARButton.createButton(renderer, { requiredFeatures: ['hit-test'] }));
+    //document.body.appendChild(ARButton.createButton(renderer, { requiredFeatures: ['hit-test'] }));
+
+    document.body.appendChild( ARButton.createButton( this.renderer, {
+        requiredFeatures: [ 'hit-test' ],
+        optionalFeatures: [ 'dom-overlay', 'dom-overlay-for-handheld-ar' ],
+        domOverlay: { root: document.body } } )
+    );
 
     //
 
-    const geometry = new THREE.CylinderGeometry(0.1, 0.1, 0.2, 32).translate(0, 0.1, 0);
+    //const geometry = new THREE.CylinderGeometry(0.1, 0.1, 0.2, 32).translate(0, 0.1, 0);
 
     function onSelect() {
 
