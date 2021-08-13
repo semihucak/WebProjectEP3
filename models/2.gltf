@@ -7,7 +7,8 @@
     {
       "name": "Scene",
       "nodes": [
-        10
+        12,
+        13
       ]
     }
   ],
@@ -236,6 +237,26 @@
         0,
         1,
         0,
+        0,
+        0,
+        -1,
+        1
+      ]
+    },
+    {
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
         5,
         10,
         7.5,
@@ -246,7 +267,8 @@
         "name": "DirectionalLight"
       },
       "children": [
-        8
+        8,
+        9
       ],
       "extensions": {
         "KHR_lights_punctual": {
@@ -255,11 +277,41 @@
       }
     },
     {
-      "name": "3.glb",
+      "name": "3glb",
+      "extras": {
+        "name": "3.glb"
+      },
       "children": [
         7,
-        9
+        10
       ]
+    },
+    {
+      "matrix": [
+        0.65,
+        0,
+        0,
+        0,
+        0,
+        0.65,
+        0,
+        0,
+        0,
+        0,
+        0.65,
+        0,
+        -0.34026832669001184,
+        0,
+        0,
+        1
+      ],
+      "name": "2.gltf",
+      "children": [
+        11
+      ]
+    },
+    {
+      "name": "AmbientLight"
     }
   ],
   "bufferViews": [
