@@ -8,6 +8,12 @@ Als opgave voor het project van web topics heb ik een gekozen om een place it ap
 
 ### Wat heb je allemaal geleerd/gelezen?
 
+### Wat waren de interessantste bronnen die je (veel) verder hebben geholpen?
+
+### Wat waren problemen waar je bent op gestoten?
+
+### Hoe heb je deze opgelost?
+
 
 ## Bronnen
 
@@ -18,5 +24,10 @@ https://threejs.org
 https://forum.playcanvas.com/t/solved-webxr-hittest-how-to-hit-test-and-show-a-reticle-on-the-floor/14621
 
 https://web.dev/ar-hit-test/
+
+https://discourse.threejs.org/t/webxr-ar-dom-overlay-cant-fill-container/27123
+
+https://discourse.threejs.org/t/rotating-3d-object-in-webxr/15926/3
+
 
 

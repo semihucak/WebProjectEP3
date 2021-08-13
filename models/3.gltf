@@ -7,9 +7,7 @@
     {
       "name": "Scene",
       "nodes": [
-        9,
-        10,
-        11
+        14
       ]
     }
   ],
@@ -194,17 +192,38 @@
         0,
         1,
         0,
+        0,
+        0,
+        -1,
+        1
+      ]
+    },
+    {
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
         5,
         10,
         7.5,
         1
       ],
-      "name": "DirectionalLight",
+      "name": "DirectionalLight_2",
       "extras": {
         "name": "DirectionalLight"
       },
       "children": [
-        7
+        7,
+        8
       ],
       "extensions": {
         "KHR_lights_punctual": {
@@ -231,14 +250,40 @@
         0,
         1
       ],
-      "name": "1.glb",
+      "name": "1glb",
+      "extras": {
+        "name": "1.glb"
+      },
       "children": [
         6,
-        8
+        9
       ]
     },
     {
-      "name": "AmbientLight"
+      "name": "AmbientLight",
+      "extras": {
+        "name": "AmbientLight"
+      }
+    },
+    {
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -1,
+        1
+      ]
     },
     {
       "matrix": [
@@ -260,11 +305,43 @@
         1
       ],
       "name": "DirectionalLight",
+      "extras": {
+        "name": "DirectionalLight"
+      },
+      "children": [
+        12
+      ],
       "extensions": {
         "KHR_lights_punctual": {
           "light": 1
         }
       }
+    },
+    {
+      "matrix": [
+        0.6,
+        0,
+        0,
+        0,
+        0,
+        0.6,
+        0,
+        0,
+        0,
+        0,
+        0.6,
+        0,
+        1.1176546052077685,
+        0,
+        0,
+        1
+      ],
+      "name": "3.gltf",
+      "children": [
+        10,
+        11,
+        13
+      ]
     }
   ],
   "bufferViews": [
@@ -511,7 +588,7 @@
     "KHR_lights_punctual": {
       "lights": [
         {
-          "name": "DirectionalLight",
+          "name": "DirectionalLight_2",
           "color": [
             1,
             1,
