@@ -178,7 +178,7 @@ function init() {
 
 var touchDown, touchX, touchY, deltaX, deltaY;
 
-}
+
 
 function onWindowResize() {
 
