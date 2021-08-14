@@ -178,6 +178,12 @@ function init() {
 
 var touchDown, touchX, touchY, deltaX, deltaY;
 
+function rotateObject(){
+	if(current_object && reticle.visible){
+		current_object.rotation.y += deltaX / 100;
+	}
+}
+
 
 
 function onWindowResize() {
