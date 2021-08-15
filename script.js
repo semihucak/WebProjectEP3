@@ -34,7 +34,7 @@ $("#ARButton").click(function () {
 
 function loadModel(model) {
 
-    /*new RGBELoader()
+    new RGBELoader()
         .setDataType(THREE.UnsignedByteType)
         .setPath('./textures/')
         .load('photo_studio_01_1k.hdr', function (texture) {
@@ -45,7 +45,7 @@ function loadModel(model) {
             texture.dispose();
             pmremGenerator.dispose();
             render();
-        */
+        
             var loader = new GLTFLoader().setPath('models/');
             loader.load(model + ".gltf", function (glb) {
 
@@ -61,9 +61,9 @@ function loadModel(model) {
                 controls.update();
                 render();
             });
-/*
+
         });
-        */
+        
 }
 
 function init() {
